@@ -12,7 +12,7 @@ CORS(app)
 # 配置
 MONGO_URL = os.getenv("MONGO_URL", "mongodb+srv://isjoellim_db_user:HC9NZr3aFrpALAqU@cluster0.iublsz0.mongodb.net/?appName=Cluster0")
 DB_NAME = os.getenv("DB_NAME", "future_tech_brief")
-JWT_SECRET = os.getenv("JWT_SECRET", "futuretechbrief2026lsy1104secret")
+JWT_SECRET = os.getenv("JWT_SECRET", "limsokyin1104")
 
 try:
     client = MongoClient(MONGO_URL)
