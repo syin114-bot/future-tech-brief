@@ -17,11 +17,11 @@ JWT_SECRET = os.getenv("JWT_SECRET")
 try:
     client = MongoClient(MONGO_URL)
 
+    client.admin.command("ping")
+
     db = client[DB_NAME]
 
     print("✅ MongoDB 连接成功")
-
-    print("DB_NAME =", DB_NAME)
 
 except Exception as e:
 
