@@ -16,9 +16,15 @@ JWT_SECRET = os.getenv("JWT_SECRET", "limsokyin1104")
 
 try:
     client = MongoClient(MONGO_URL)
+
     db = client[DB_NAME]
+
     print("✅ MongoDB 连接成功")
+
+    print("DB_NAME =", DB_NAME)
+
 except Exception as e:
+
     print(f"❌ MongoDB 连接失败: {e}")
 
 # ── 首页 ──
