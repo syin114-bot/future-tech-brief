@@ -613,7 +613,7 @@ async function loadNews() {
       const date = new Date(article.publishedAt).toLocaleDateString('zh-CN');
 
       return `
-        <a class="news-card" href="${article.url}" target="_blank" rel="noopener">
+        <a class="news-card" href="${article.urlOriginal}" target="_blank" rel="noopener">
           <div class="news-meta">
             <span class="news-tag ${tagClass}">${article.category}</span>
             <span class="news-date">${date}</span>
