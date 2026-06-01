@@ -817,7 +817,83 @@ async function copyLink() {
     prompt('请手动复制链接：', url);
   }
 }
+// ─────────────────────────────
+// 三语系统 V1
+// 中文 / English / Bahasa Melayu
+// ─────────────────────────────
 
+let currentLang = 'zh';
+
+const translations = {
+
+  zh: {
+    button: '🌐 中文',
+    home: '首页',
+    tools: 'AI 工具',
+    vibe: 'Vibe Coding',
+    projects: '项目',
+    news: '资讯'
+  },
+
+  en: {
+    button: '🌐 English',
+    home: 'Home',
+    tools: 'AI Tools',
+    vibe: 'Vibe Coding',
+    projects: 'Projects',
+    news: 'News'
+  },
+
+  ms: {
+    button: '🌐 BM',
+    home: 'Laman Utama',
+    tools: 'Alat AI',
+    vibe: 'Vibe Coding',
+    projects: 'Projek',
+    news: 'Berita'
+  }
+
+};
+
+function updateLanguage() {
+
+  const t = translations[currentLang];
+
+  document.getElementById('lang-btn').textContent =
+    t.button;
+
+  document.getElementById('nav-home').textContent =
+    t.home;
+
+  document.getElementById('nav-tools').textContent =
+    t.tools;
+
+  document.getElementById('nav-vibe').textContent =
+    t.vibe;
+
+  document.getElementById('nav-projects').textContent =
+    t.projects;
+
+  document.getElementById('nav-news').textContent =
+    t.news;
+}
+
+document
+  .getElementById('lang-btn')
+  .addEventListener('click', () => {
+
+    if (currentLang === 'zh') {
+      currentLang = 'en';
+    }
+    else if (currentLang === 'en') {
+      currentLang = 'ms';
+    }
+    else {
+      currentLang = 'zh';
+    }
+
+    updateLanguage();
+});
 // ── 初始化 ──
 renderTools();
 renderProjects();
