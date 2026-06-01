@@ -1,0 +1,259 @@
+/* ════════════════════════════════════════════
+   多语言系统样式 (i18n Styles)
+   ════════════════════════════════════════════ */
+
+/* ── 语言选择首屏弹窗 ── */
+.language-selector-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 20px;
+}
+
+.language-selector-overlay.show {
+  opacity: 1;
+}
+
+.language-selector-overlay.closing {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.language-selector-modal {
+  background: linear-gradient(135deg, rgba(13, 24, 41, 0.95) 0%, rgba(15, 28, 46, 0.95) 100%);
+  border: 1px solid rgba(0, 180, 255, 0.2);
+  border-radius: 20px;
+  padding: 60px 40px;
+  max-width: 540px;
+  width: 100%;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 25px 80px rgba(0, 180, 255, 0.15);
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.language-selector-content {
+  text-align: center;
+}
+
+.language-selector-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(24px, 6vw, 36px);
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 12px;
+  background: linear-gradient(90deg, #00b4ff 0%, #7c3aed 50%, #00e5a0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.lang-text {
+  display: block;
+  color: #e8edf5;
+}
+
+.language-selector-subtitle {
+  color: #5a7090;
+  font-size: 14px;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* ── 语言选项按钮 ── */
+.language-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.language-option {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(0, 180, 255, 0.15);
+  border-radius: 14px;
+  padding: 24px 16px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  color: #e8edf5;
+}
+
+.language-option:hover {
+  border-color: rgba(0, 180, 255, 0.4);
+  background: rgba(0, 180, 255, 0.08);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0, 180, 255, 0.15);
+}
+
+.language-option.active {
+  background: linear-gradient(135deg, rgba(0, 180, 255, 0.15), rgba(124, 58, 237, 0.15));
+  border-color: rgba(0, 180, 255, 0.4);
+}
+
+.lang-flag {
+  font-size: 32px;
+  display: block;
+}
+
+.lang-name {
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.4;
+  color: #5a7090;
+}
+
+.language-option:hover .lang-name {
+  color: #e8edf5;
+}
+
+.language-selector-hint {
+  font-size: 12px;
+  color: #3a5070;
+  margin-top: 12px;
+}
+
+/* ── 导航栏语言按钮 ── */
+.lang-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  color: #5a7090;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lang-btn:hover {
+  background: rgba(0, 180, 255, 0.08);
+  border-color: rgba(0, 180, 255, 0.25);
+  color: #00b4ff;
+}
+
+/* ── 语言下拉菜单 ── */
+.language-dropdown-menu {
+  position: fixed;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  z-index: 1001;
+  min-width: 180px;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: all 0.2s ease;
+}
+
+.language-dropdown-menu.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.language-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 14px;
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  font-size: 13px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s;
+  text-align: left;
+  justify-content: space-between;
+}
+
+.language-dropdown-item:hover {
+  background: rgba(0, 180, 255, 0.08);
+  color: var(--text);
+}
+
+.language-dropdown-item.active {
+  background: rgba(0, 180, 255, 0.1);
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.language-dropdown-item .lang-flag {
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.check-mark {
+  color: var(--green);
+  font-size: 12px;
+  margin-left: auto;
+}
+
+/* ── 响应式设计 ── */
+@media (max-width: 640px) {
+  .language-selector-modal {
+    padding: 40px 24px;
+  }
+
+  .language-selector-title {
+    font-size: 22px;
+  }
+
+  .language-options {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .language-option {
+    padding: 18px 12px;
+    gap: 8px;
+  }
+
+  .lang-flag {
+    font-size: 28px;
+  }
+
+  .lang-name {
+    font-size: 11px;
+  }
+}
+
+/* ── 动画支持 ── */
+@media (prefers-reduced-motion: reduce) {
+  .language-selector-overlay,
+  .language-selector-modal,
+  .language-option,
+  .lang-btn,
+  .language-dropdown-menu {
+    transition: none;
+  }
+}
