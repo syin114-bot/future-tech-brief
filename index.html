@@ -553,30 +553,70 @@ function renderTools(filter = 'all') {
 function renderProjects(list) {
   const data = list || defaultProjects;
   const grid = document.getElementById('projects-grid');
+
   grid.innerHTML = data.map((p, i) => `
     <div class="project-card">
       <div class="project-img">${p.emoji || '🚀'}</div>
+
       <div class="project-body">
         <div class="project-top">
-          <span class="project-rank-badge">排名 #${p.rank || i+1}</span>
-          <span class="project-diff diff-${p.diff || 'beginner'}">${p.diff === 'beginner' ? '初级' : p.diff === 'intermediate' ? '中级' : '高级'}</span>
+          <span class="project-rank-badge">
+            排名 #${p.rank || i + 1}
+          </span>
+
+          <span class="project-diff diff-${p.diff || 'beginner'}">
+            ${
+              p.diff === 'beginner'
+                ? '初级'
+                : p.diff === 'intermediate'
+                ? '中级'
+                : '高级'
+            }
+          </span>
         </div>
-        <div class="project-title">${p.name}</div>
-        <div class="project-desc">${p.desc}</div>
+
+        <div class="project-title">
+          ${p.name || p.title || '未命名'}
+        </div>
+
+        <div class="project-desc">
+          ${p.desc || p.description || '暂无描述'}
+        </div>
+
         <div class="project-creator">
-          <div class="creator-avatar">${(p.author_name || p.creator || '?')[0]}</div>
-          <div class="creator-name">${p.author_name || p.creator || '匿名'} · 2026</div>
+          <div class="creator-avatar">
+            ${(p.author_name || p.creator || '?')[0]}
+          </div>
+
+          <div class="creator-name">
+            ${p.author_name || p.creator || '匿名'} · 2026
+          </div>
         </div>
-        <div class="project-tags">${(p.tags||[]).map(t => `<span class="ptag">${t}</span>`).join('')}</div>
+
+        <div class="project-tags">
+          ${(p.tags || [])
+            .map(t => `<span class="ptag">${t}</span>`)
+            .join('')}
+        </div>
+
         <div class="project-stats">
-          <button class="pstat" onclick="voteProject('${p._id || ''}', this)" style="background:none; border:none; cursor:pointer; color:inherit;" ${!p._id ? 'disabled title="点击投票"' : ''}>
+          <button
+            class="pstat"
+            onclick="voteProject('${p.id || p._id || ''}', this)"
+            style="background:none;border:none;cursor:pointer;color:inherit;"
+            ${(!p._id && !p.id)
+              ? 'disabled title="点击投票"'
+              : ''}
+          >
             👍 <span class="vote-count">${p.votes || 0}</span>
           </button>
+
           <div class="pstat">💬 ${p.comments || 0}</div>
           <div class="pstat">🔗 ${p.shares || 0}</div>
         </div>
       </div>
-    </div>`).join('');
+    </div>
+  `).join('');
 }
 
 // ── 从后端加载项目 ──
