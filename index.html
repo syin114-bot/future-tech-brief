@@ -569,7 +569,9 @@ function renderProjects(list) {
         </div>
         <div class="project-tags">${(p.tags||[]).map(t => `<span class="ptag">${t}</span>`).join('')}</div>
         <div class="project-stats">
-          <div class="pstat">👍 ${p.votes || 0}</div>
+          <button class="pstat" onclick="voteProject('${p._id || ''}', this)" style="background:none; border:none; cursor:pointer; color:inherit;" ${!p._id ? 'disabled title="点击投票"' : ''}>
+            👍 <span class="vote-count">${p.votes || 0}</span>
+          </button>
           <div class="pstat">💬 ${p.comments || 0}</div>
           <div class="pstat">🔗 ${p.shares || 0}</div>
         </div>
@@ -587,6 +589,42 @@ async function loadProjects() {
     }
   } catch (e) {
     console.log('Using default projects');
+  }
+}
+
+// ── 从 futuretech-newsletter 加载实时新闻 ──✨ 新增
+async function loadNews() {
+  try {
+    const res = await fetch('https://futuretech-newsletter.vercel.app/news.json');
+    if (!res.ok) throw new Error('新闻加载失败');
+    
+    const data = await res.json();
+    const grid = document.getElementById('news-grid');
+    
+    // 映射 API 数据到卡片格式
+    grid.innerHTML = data.articles.slice(0, 6).map(article => {
+      // 确定分类标签样式
+      let tagClass = 'tag-ai';
+      if (article.category.includes('马斯克')) tagClass = 'tag-tool';
+      else if (article.category.includes('趋势')) tagClass = 'tag-world';
+      else if (article.category.includes('Vibe')) tagClass = 'tag-coding';
+
+      // 格式化日期
+      const date = new Date(article.publishedAt).toLocaleDateString('zh-CN');
+
+      return `
+        <a class="news-card" href="${article.url}" target="_blank" rel="noopener">
+          <div class="news-meta">
+            <span class="news-tag ${tagClass}">${article.category}</span>
+            <span class="news-date">${date}</span>
+          </div>
+          <div class="news-title">${article.title}</div>
+          <div class="news-desc">${article.summary}</div>
+        </a>
+      `;
+    }).join('');
+  } catch (e) {
+    console.log('新闻加载失败:', e);
   }
 }
 
@@ -678,7 +716,7 @@ function handleUploadClick() {
   openModal('upload');
 }
 
-// ── 提交项目（真正连接后端）──
+// ── 提交项目 ──
 async function submitProject() {
   const token = localStorage.getItem('token');
   if (!token) { toast('❌ 请先登录'); return; }
@@ -720,6 +758,44 @@ async function submitProject() {
   }
 }
 
+// ── 项目投票 ──✨ 新增
+async function voteProject(projectId, btn) {
+  if (!projectId) {
+    toast('⚠️ 这是演示项目，不支持投票');
+    return;
+  }
+
+  const token = localStorage.getItem('token');
+  if (!token) {
+    toast('⚠️ 请先登录');
+    openModal('auth');
+    return;
+  }
+
+  btn.disabled = true;
+  btn.style.opacity = '0.5';
+
+  try {
+    const res = await fetch(`${API_URL}/api/projects/${projectId}/vote`, {
+      method: 'POST',
+      headers: { 'Authorization': 'Bearer ' + token }
+    });
+    const data = await res.json();
+    if (data.status === 'success') {
+      btn.querySelector('.vote-count').textContent = data.votes;
+      toast('👍 投票成功！');
+    } else {
+      toast('❌ ' + data.message);
+      btn.disabled = false;
+      btn.style.opacity = '1';
+    }
+  } catch (e) {
+    toast('❌ 投票失败');
+    btn.disabled = false;
+    btn.style.opacity = '1';
+  }
+}
+
 // ── Toast ──
 function toast(msg) {
   const el = document.createElement('div');
@@ -744,6 +820,7 @@ async function copyLink() {
 renderTools();
 renderProjects();
 loadProjects();
+loadNews();          // ← 加入自动加载新闻
 checkLoginStatus();
 </script>
 </body>
