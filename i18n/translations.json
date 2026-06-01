@@ -1,0 +1,638 @@
+{
+  "zh-CN": {
+    "nav": {
+      "home": "首页",
+      "news": "资讯",
+      "tools": "工具",
+      "vibe": "Vibe Coding",
+      "projects": "项目",
+      "join": "立即加入"
+    },
+    "hero": {
+      "badge": "2026 · 最新 AI 资讯实时更新",
+      "title_line1": "用 No-Code AI",
+      "title_line2": "改变世界",
+      "subtitle": "展示你的 AI 创意，发现最新工具，加入马来西亚最活跃的 AI 学生社区",
+      "cta_primary": "🚀 立即加入",
+      "cta_secondary": "浏览项目",
+      "stat_users": "注册用户",
+      "stat_projects": "AI 项目",
+      "stat_tools": "AI 工具收录",
+      "stat_update": "每日 9:00 更新"
+    },
+    "news": {
+      "section_tag": "📰 实时资讯",
+      "section_title": "本周 AI 热点",
+      "tag_ai": "AI最新进展",
+      "tag_tool": "马斯克动态",
+      "tag_world": "未来科技趋势",
+      "tag_coding": "Vibe Coding"
+    },
+    "tools": {
+      "section_tag": "🏆 工具排行",
+      "section_title": "本周最热 AI 工具",
+      "tab_all": "全部",
+      "tab_vibe": "🎨 Vibe Coding",
+      "tab_design": "✏️ 设计创作",
+      "tab_writing": "📝 写作助手",
+      "tab_dev": "💻 开发工具",
+      "tab_chat": "💬 AI 对话",
+      "new_badge": "🆕 新上榜",
+      "tools_list": {
+        "cursor": {
+          "name": "Cursor",
+          "desc": "AI 驱动的代码编辑器，Vibe Coding 首选工具。"
+        },
+        "v0": {
+          "name": "v0 by Vercel",
+          "desc": "一句话生成完整 React 组件和网页，自动部署到 Vercel。"
+        },
+        "chatgpt": {
+          "name": "ChatGPT",
+          "desc": "最广泛使用的 AI 对话工具，写作、分析、问答全能。"
+        },
+        "claude": {
+          "name": "Claude",
+          "desc": "Anthropic 出品，长文档分析、编程和写作效果极佳。"
+        },
+        "bolt": {
+          "name": "Bolt.new",
+          "desc": "浏览器内全栈开发，支持 Node.js 后端，无需本地环境。"
+        },
+        "midjourney": {
+          "name": "Midjourney",
+          "desc": "AI 图像生成领域标杆，V7 版本画质接近真实摄影。"
+        },
+        "lovable": {
+          "name": "Lovable",
+          "desc": "无代码全栈 App 构建器，支持数据库和用户认证。"
+        },
+        "copilot": {
+          "name": "GitHub Copilot",
+          "desc": "代码补全神器，与 VS Code 深度集成，支持多语言。"
+        },
+        "notion": {
+          "name": "Notion AI",
+          "desc": "在 Notion 内直接使用 AI 写作、总结、翻译文档。"
+        },
+        "gamma": {
+          "name": "Gamma",
+          "desc": "AI 自动生成专业演示文稿，学生展示项目必备。"
+        },
+        "dalle": {
+          "name": "DALL-E 3",
+          "desc": "OpenAI 图像生成，集成在 ChatGPT 中，简单易用。"
+        },
+        "replit": {
+          "name": "Replit",
+          "desc": "浏览器内编程环境，AI 助手帮你完成整个项目。"
+        }
+      }
+    },
+   "vibe": {
+      "section_tag": "🎨 Vibe Coding",
+      "section_title": "不写代码也能做 AI 应用",
+      "intro": "Vibe Coding 是 2026 年最火的趋势——用自然语言描述你的想法，让 AI 帮你写代码。适合完全没有编程基础的同学！",
+      "cards": {
+        "website": {
+          "icon": "🚀",
+          "name": "快速建站",
+          "desc": "用 AI 在 10 分钟内搭建一个完整网站，包括设计、功能、部署，完全不需要写代码。",
+          "step1": "描述你的想法——告诉 AI 你想做什么网站",
+          "step2": "预览 + 修改——实时看到效果，用对话调整",
+          "step3": "一键部署——上线分享给所有人"
+        },
+        "chatbot": {
+          "icon": "🤖",
+          "name": "AI Chatbot 开发",
+          "desc": "无需后端知识，用 Vibe Coding 工具创建你自己的 AI 聊天机器人。",
+          "step1": "定义用途——客服、教育、娱乐？",
+          "step2": "上传知识库——放入文档、FAQ、产品信息",
+          "step3": "测试 + 嵌入——分享链接或嵌入网站"
+        },
+        "design": {
+          "icon": "🎨",
+          "name": "AI 设计 + 图像",
+          "desc": "一句话生成海报、Logo、插画、社媒配图，还能自动制作视频内容和演示文稿。",
+          "step1": "写提示词——描述风格、颜色、内容",
+          "step2": "选择 + 优化——从多个结果中挑选",
+          "step3": "导出使用——直接用于项目展示"
+        },
+        "data": {
+          "icon": "📊",
+          "name": "数据分析 App",
+          "desc": "把你的 Excel 数据交给 AI，自动生成可视化仪表板，发现数据规律。",
+          "step1": "上传数据——CSV、Excel 都支持",
+          "step2": "提问分析——"找出销售最高的月份"",
+          "step3": "导出报告——自动生成图表和总结"
+        }
+      }
+    },
+    "projects": {
+      "section_tag": "🏅 项目展示",
+      "section_title": "社区热门项目",
+      "upload_btn": "+ 上传我的项目",
+      "rank_badge": "排名",
+      "personal_project": "个人项目"
+    },
+    "share": {
+      "emoji": "🎁",
+      "title": "分享即可获得永久免费订阅",
+      "subtitle": "只需把你的专属链接分享给 1 位朋友",
+      "benefit1_title": "永久免费订阅",
+      "benefit1_desc": "终身享有所有高级功能",
+      "benefit2_title": "加入 WhatsApp 群",
+      "benefit2_desc": "每天 9:00 接收最新 AI 资讯",
+      "benefit3_title": "解锁成就徽章",
+      "benefit3_desc": "社区贡献者专属徽章",
+      "btn_whatsapp": "💬 WhatsApp 分享",
+      "btn_facebook": "📘 Facebook 分享",
+      "btn_copy": "🔗 复制专属链接",
+      "btn_later": "稍后再说"
+    },
+    "footer": {
+      "about": "关于我们",
+      "contact": "联系我们",
+      "privacy": "隐私政策",
+      "terms": "服务条款",
+      "copyright": "© 2026 未来科技简报. All rights reserved."
+    }
+  },
+  "zh-TW": {
+    "nav": {
+      "home": "首頁",
+      "news": "資訊",
+      "tools": "工具",
+      "vibe": "Vibe Coding",
+      "projects": "專案",
+      "join": "立即加入"
+    },
+  "hero": {
+"badge": "2026 · 最新 AI 資訊即時更新",
+      "title_line1": "用 No-Code AI",
+      "title_line2": "改變世界",
+      "subtitle": "展示你的 AI 創意，發現最新工具，加入馬來西亞最活躍的 AI 學生社群",
+      "cta_primary": "🚀 立即加入",
+      "cta_secondary": "瀏覽專案",
+      "stat_users": "註冊用戶",
+      "stat_projects": "AI 專案",
+      "stat_tools": "AI 工具收錄",
+      "stat_update": "每日 9:00 更新"
+    },
+    "news": {
+      "section_tag": "📰 即時資訊",
+      "section_title": "本週 AI 熱點",
+      "tag_ai": "AI最新進展",
+      "tag_tool": "馬斯克動態",
+      "tag_world": "未來科技趨勢",
+      "tag_coding": "Vibe Coding"
+    },
+    "tools": {
+      "section_tag": "🏆 工具排行",
+      "section_title": "本週最熱 AI 工具",
+      "tab_all": "全部",
+      "tab_vibe": "🎨 Vibe Coding",
+      "tab_design": "✏️ 設計創作",
+      "tab_writing": "📝 寫作助手",
+      "tab_dev": "💻 開發工具",
+      "tab_chat": "💬 AI 對話",
+      "new_badge": "🆕 新上榜",
+      "tools_list": {
+        "cursor": {
+          "name": "Cursor",
+          "desc": "AI 驅動的程式碼編輯器，Vibe Coding 首選工具。"
+        },
+        "v0": {
+          "name": "v0 by Vercel",
+          "desc": "一句話生成完整 React 元件和網頁，自動部署到 Vercel。"
+        },
+        "chatgpt": {
+          "name": "ChatGPT",
+          "desc": "最廣泛使用的 AI 對話工具，寫作、分析、問答全能。"
+        },
+        "claude": {
+          "name": "Claude",
+          "desc": "Anthropic 出品，長文件分析、程式設計和寫作效果極佳。"
+        },
+        "bolt": {
+          "name": "Bolt.new",
+          "desc": "瀏覽器內全端開發，支援 Node.js 後端，無需本地環境。"
+        },
+        "midjourney": {
+          "name": "Midjourney",
+          "desc": "AI 圖像生成領域標杆，V7 版本畫質接近真實攝影。"
+        },
+        "lovable": {
+          "name": "Lovable",
+          "desc": "無程式碼全端 App 建置器，支援資料庫和使用者認證。"
+        },
+        "copilot": {
+          "name": "GitHub Copilot",
+          "desc": "程式碼補全神器，與 VS Code 深度整合，支援多語言。"
+        },
+        "notion": {
+          "name": "Notion AI",
+          "desc": "在 Notion 內直接使用 AI 寫作、總結、翻譯文件。"
+        },
+        "gamma": {
+          "name": "Gamma",
+          "desc": "AI 自動生成專業簡報，學生展示專案必備。"
+        },
+        "dalle": {
+          "name": "DALL-E 3",
+          "desc": "OpenAI 圖像生成，整合在 ChatGPT 中，簡單易用。"
+        },
+        "replit": {
+          "name": "Replit",
+          "desc": "瀏覽器內程式設計環境，AI 助手幫你完成整個專案。"
+        }
+      }
+    },
+    "vibe": {
+      "section_tag": "🎨 Vibe Coding",
+      "section_title": "不寫程式碼也能做 AI 應用",
+      "intro": "Vibe Coding 是 2026 年最火的趨勢——用自然語言描述你的想法，讓 AI 幫你寫程式碼。適合完全沒有程式設計基礎的同學！",
+      "cards": {
+        "website": {
+          "icon": "🚀",
+          "name": "快速建站",
+          "desc": "用 AI 在 10 分鐘內搭建一個完整網站，包括設計、功能、部署，完全不需要寫程式碼。",
+          "step1": "描述你的想法——告訴 AI 你想做什麼網站",
+          "step2": "預覽 + 修改——即時看到效果，用對話調整",
+          "step3": "一鍵部署——上線分享給所有人"
+        },
+        "chatbot": {
+          "icon": "🤖",
+          "name": "AI Chatbot 開發",
+          "desc": "無需後端知識，用 Vibe Coding 工具建立你自己的 AI 聊天機器人。",
+          "step1": "定義用途——客服、教育、娛樂？",
+          "step2": "上傳知識庫——放入文件、FAQ、產品資訊",
+          "step3": "測試 + 嵌入——分享連結或嵌入網站"
+        },
+        "design": {
+          "icon": "🎨",
+          "name": "AI 設計 + 圖像",
+          "desc": "一句話生成海報、Logo、插畫、社群媒體配圖，還能自動製作影片內容和簡報。",
+          "step1": "寫提示詞——描述風格、顏色、內容",
+          "step2": "選擇 + 優化——從多個結果中挑選",
+          "step3": "匯出使用——直接用於專案展示"
+        },
+        "data": {
+          "icon": "📊",
+          "name": "資料分析 App",
+          "desc": "把你的 Excel 資料交給 AI，自動生成視覺化儀表板，發現資料規律。",
+          "step1": "上傳資料——CSV、Excel 都支援",
+          "step2": "提問分析——"找出銷售最高的月份"",
+          "step3": "匯出報告——自動生成圖表和總結"
+        }
+      }
+    },
+    "projects": {
+      "section_tag": "🏅 專案展示",
+      "section_title": "社群熱門專案",
+      "upload_btn": "+ 上傳我的專案",
+      "rank_badge": "排名",
+      "personal_project": "個人專案"
+    },
+    "share": {
+      "emoji": "🎁",
+      "title": "分享即可獲得永久免費訂閱",
+      "subtitle": "只需把你的專屬連結分享給 1 位朋友",
+      "benefit1_title": "永久免費訂閱",
+      "benefit1_desc": "終身享有所有進階功能",
+      "benefit2_title": "加入 WhatsApp 群",
+      "benefit2_desc": "每天 9:00 接收最新 AI 資訊",
+      "benefit3_title": "解鎖成就徽章",
+      "benefit3_desc": "社群貢獻者專屬徽章",
+      "btn_whatsapp": "💬 WhatsApp 分享",
+      "btn_facebook": "📘 Facebook 分享",
+      "btn_copy": "🔗 複製專屬連結",
+      "btn_later": "稍後再說"
+    },
+    "footer": {
+      "about": "關於我們",
+      "contact": "聯絡我們",
+      "privacy": "隱私權政策",
+      "terms": "服務條款",
+      "copyright": "© 2026 未來科技簡報. All rights reserved."
+    }
+  },
+  "en": {
+    "nav": {
+      "home": "Home",
+      "news": "News",
+      "tools": "Tools",
+      "vibe": "Vibe Coding",
+      "projects": "Projects",
+      "join": "Join Now"
+    },
+    "hero": {
+     "badge": "2026 · Latest AI News Real-time Updates",
+      "title_line1": "Build with No-Code AI",
+      "title_line2": "Change the World",
+      "subtitle": "Showcase your AI creativity, discover latest tools, join Malaysia's most active AI student community",
+      "cta_primary": "🚀 Join Now",
+      "cta_secondary": "Browse Projects",
+      "stat_users": "Registered Users",
+      "stat_projects": "AI Projects",
+      "stat_tools": "AI Tools Listed",
+      "stat_update": "Daily Updates at 9:00 AM"
+    },
+    "news": {
+      "section_tag": "📰 Real-time News",
+      "section_title": "This Week's AI Highlights",
+      "tag_ai": "AI Latest",
+      "tag_tool": "Musk Updates",
+      "tag_world": "Future Tech Trends",
+      "tag_coding": "Vibe Coding"
+    },
+    "tools": {
+      "section_tag": "🏆 Tool Rankings",
+      "section_title": "Hottest AI Tools This Week",
+      "tab_all": "All",
+      "tab_vibe": "🎨 Vibe Coding",
+      "tab_design": "✏️ Design",
+      "tab_writing": "📝 Writing",
+      "tab_dev": "💻 Development",
+      "tab_chat": "💬 AI Chat",
+      "new_badge": "🆕 New",
+      "tools_list": {
+        "cursor": {
+          "name": "Cursor",
+          "desc": "AI-powered code editor, the go-to tool for Vibe Coding."
+        },
+        "v0": {
+          "name": "v0 by Vercel",
+          "desc": "Generate complete React components and web pages with one sentence, auto-deploy to Vercel."
+        },
+        "chatgpt": {
+          "name": "ChatGPT",
+          "desc": "Most widely used AI conversation tool for writing, analysis, and Q&A."
+        },
+        "claude": {
+          "name": "Claude",
+          "desc": "By Anthropic, excellent for long document analysis, coding, and writing."
+        },
+        "bolt": {
+          "name": "Bolt.new",
+          "desc": "Full-stack development in browser with Node.js backend, no local setup needed."
+        },
+        "midjourney": {
+          "name": "Midjourney",
+          "desc": "AI image generation benchmark, V7 version approaches photographic quality."
+        },
+        "lovable": {
+          "name": "Lovable",
+          "desc": "No-code full-stack app builder with database and user authentication."
+        },
+        "copilot": {
+          "name": "GitHub Copilot",
+          "desc": "Code completion powerhouse, deeply integrated with VS Code, multi-language support."
+        },
+        "notion": {
+          "name": "Notion AI",
+          "desc": "Use AI directly in Notion for writing, summarizing, and translating documents."
+        },
+        "gamma": {
+          "name": "Gamma",
+          "desc": "AI-generated professional presentations, essential for student project showcases."
+        },
+        "dalle": {
+          "name": "DALL-E 3",
+          "desc": "OpenAI image generation, integrated in ChatGPT, simple and easy to use."
+        },
+        "replit": {
+          "name": "Replit",
+          "desc": "Browser-based coding environment with AI assistant to complete entire projects."
+        }
+      }
+    },
+    "vibe": {
+      "section_tag": "🎨 Vibe Coding",
+      "section_title": "Build AI Apps Without Coding",
+      "intro": "Vibe Coding is the hottest trend of 2026 — describe your idea in natural language and let AI write the code. Perfect for those with zero programming background!",
+      "cards": {
+        "website": {
+          "icon": "🚀",
+          "name": "Quick Website Builder",
+          "desc": "Build a complete website in 10 minutes with AI, including design, features, and deployment — no coding required.",
+          "step1": "Describe your idea — Tell AI what website you want",
+          "step2": "Preview + Modify — See results in real-time, adjust via chat",
+          "step3": "One-click Deploy — Launch and share with everyone"
+        },
+        "chatbot": {
+          "icon": "🤖",
+          "name": "AI Chatbot Development",
+          "desc": "Create your own AI chatbot with Vibe Coding tools, no backend knowledge needed.",
+          "step1": "Define purpose — Customer service, education, or entertainment?",
+          "step2": "Upload knowledge base — Add documents, FAQs, product info",
+          "step3": "Test + Embed — Share link or embed in website"
+        },
+        "design": {
+          "icon": "🎨",
+          "name": "AI Design + Images",
+          "desc": "Generate posters, logos, illustrations, and social media graphics with one sentence, plus automatic video content and presentations.",
+          "step1": "Write prompt — Describe style, colors, content",
+          "step2": "Select + Optimize — Choose from multiple results",
+          "step3": "Export & Use — Ready for project showcases"
+        },
+        "data": {
+          "icon": "📊",
+          "name": "Data Analysis App",
+          "desc": "Give your Excel data to AI, automatically generate visualized dashboards and discover data patterns.",
+          "step1": "Upload data — CSV and Excel supported",
+          "step2": "Ask questions — \"Find the month with highest sales\"",
+          "step3": "Export report — Auto-generate charts and summaries"
+        }
+      }
+    },
+    "projects": {
+      "section_tag": "🏅 Project Showcase",
+      "section_title": "Community Hot Projects",
+      "upload_btn": "+ Upload My Project",
+      "rank_badge": "Rank",
+      "personal_project": "Personal Project"
+    },
+    "share": {
+      "emoji": "🎁",
+      "title": "Get Lifetime Free Subscription by Sharing",
+      "subtitle": "Just share your exclusive link with 1 friend",
+      "benefit1_title": "Lifetime Free Subscription",
+      "benefit1_desc": "Enjoy all premium features forever",
+      "benefit2_title": "Join WhatsApp Group",
+      "benefit2_desc": "Receive latest AI news daily at 9:00 AM",
+      "benefit3_title": "Unlock Achievement Badges",
+      "benefit3_desc": "Exclusive badges for community contributors",
+      "btn_whatsapp": "💬 WhatsApp Share",
+      "btn_facebook": "📘 Facebook Share",
+      "btn_copy": "🔗 Copy Exclusive Link",
+      "btn_later": "Later"
+    },
+    "footer": {
+      "about": "About Us",
+      "contact": "Contact",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "copyright": "© 2026 Future Tech Brief. All rights reserved."
+    }
+  },
+  "ms": {
+    "nav": {
+      "home": "Laman Utama",
+      "news": "Berita",
+      "tools": "Alat",
+      "vibe": "Vibe Coding",
+      "projects": "Projek",
+      "join": "Sertai Sekarang"
+    },
+    "hero": {
+  "badge": "2026 · Kemas Kini Berita AI Terkini Secara Langsung",
+      "title_line1": "Bina dengan No-Code AI",
+      "title_line2": "Ubah Dunia",
+      "subtitle": "Pamerkan kreativiti AI anda, temui alat terkini, sertai komuniti pelajar AI paling aktif di Malaysia",
+      "cta_primary": "🚀 Sertai Sekarang",
+      "cta_secondary": "Layari Projek",
+      "stat_users": "Pengguna Berdaftar",
+      "stat_projects": "Projek AI",
+      "stat_tools": "Alat AI Disenaraikan",
+      "stat_update": "Kemas Kini Harian 9:00 Pagi"
+    },
+    "news": {
+      "section_tag": "📰 Berita Masa Nyata",
+      "section_title": "Sorotan AI Minggu Ini",
+      "tag_ai": "Perkembangan AI Terkini",
+      "tag_tool": "Berita Musk",
+      "tag_world": "Trend Teknologi Masa Depan",
+      "tag_coding": "Vibe Coding"
+    },
+    "tools": {
+      "section_tag": "🏆 Kedudukan Alat",
+      "section_title": "Alat AI Terpanas Minggu Ini",
+      "tab_all": "Semua",
+      "tab_vibe": "🎨 Vibe Coding",
+      "tab_design": "✏️ Reka Bentuk",
+      "tab_writing": "📝 Penulisan",
+      "tab_dev": "💻 Pembangunan",
+      "tab_chat": "💬 Perbualan AI",
+      "new_badge": "🆕 Baharu",
+      "tools_list": {
+        "cursor": {
+          "name": "Cursor",
+          "desc": "Editor kod berkuasa AI, alat pilihan untuk Vibe Coding."
+        },
+        "v0": {
+          "name": "v0 by Vercel",
+          "desc": "Jana komponen React lengkap dan halaman web dengan satu ayat, auto-deploy ke Vercel."
+        },
+        "chatgpt": {
+          "name": "ChatGPT",
+          "desc": "Alat perbualan AI paling meluas digunakan untuk penulisan, analisis, dan soal jawab."
+        },
+        "claude": {
+          "name": "Claude",
+          "desc": "Oleh Anthropic, cemerlang untuk analisis dokumen panjang, pengkodan, dan penulisan."
+        },
+        "bolt": {
+          "name": "Bolt.new",
+          "desc": "Pembangunan full-stack dalam pelayar dengan backend Node.js, tiada persediaan tempatan diperlukan."
+        },
+        "midjourney": {
+          "name": "Midjourney",
+          "desc": "Penanda aras penjanaan imej AI, versi V7 menghampiri kualiti fotografi."
+        },
+        "lovable": {
+          "name": "Lovable",
+          "desc": "Pembina aplikasi full-stack tanpa kod dengan pangkalan data dan pengesahan pengguna."
+        },
+        "copilot": {
+          "name": "GitHub Copilot",
+          "desc": "Kuasa pelengkapan kod, disepadukan mendalam dengan VS Code, sokongan berbilang bahasa."
+        },
+        "notion": {
+          "name": "Notion AI",
+          "desc": "Guna AI terus dalam Notion untuk menulis, merumuskan, dan menterjemah dokumen."
+        },
+        "gamma": {
+          "name": "Gamma",
+          "desc": "Persembahan profesional yang dijana AI, penting untuk paparan projek pelajar."
+        },
+        "dalle": {
+          "name": "DALL-E 3",
+          "desc": "Penjanaan imej OpenAI, disepadukan dalam ChatGPT, mudah dan senang digunakan."
+        },
+        "replit": {
+          "name": "Replit",
+          "desc": "Persekitaran pengkodan berasaskan pelayar dengan pembantu AI untuk melengkapkan keseluruhan projek."
+        }
+      }
+    },
+    "vibe": {
+      "section_tag": "🎨 Vibe Coding",
+      "section_title": "Bina Aplikasi AI Tanpa Pengkodan",
+      "intro": "Vibe Coding adalah trend terhangat 2026 — terangkan idea anda dalam bahasa semula jadi dan biarkan AI menulis kod. Sempurna untuk mereka yang tiada latar belakang pengaturcaraan!",
+      "cards": {
+        "website": {
+          "icon": "🚀",
+          "name": "Pembina Laman Web Pantas",
+          "desc": "Bina laman web lengkap dalam 10 minit dengan AI, termasuk reka bentuk, ciri, dan deployment — tiada pengkodan diperlukan.",
+          "step1": "Terangkan idea anda — Beritahu AI laman web apa yang anda mahukan",
+          "step2": "Pratonton + Ubah Suai — Lihat hasil dalam masa nyata, laraskan melalui sembang",
+          "step3": "Deploy Sekali Klik — Lancarkan dan kongsi dengan semua orang"
+        },
+        "chatbot": {
+          "icon": "🤖",
+          "name": "Pembangunan Chatbot AI",
+          "desc": "Cipta chatbot AI anda sendiri dengan alat Vibe Coding, tiada pengetahuan backend diperlukan.",
+          "step1": "Tentukan tujuan — Perkhidmatan pelanggan, pendidikan, atau hiburan?",
+          "step2": "Muat naik pangkalan pengetahuan — Tambah dokumen, FAQ, maklumat produk",
+          "step3": "Uji + Benamkan — Kongsi pautan atau benamkan dalam laman web"
+        },
+        "design": {
+          "icon": "🎨",
+          "name": "Reka Bentuk AI + Imej",
+          "desc": "Jana poster, logo, ilustrasi, dan grafik media sosial dengan satu ayat, ditambah kandungan video automatik dan persembahan.",
+          "step1": "Tulis prompt — Terangkan gaya, warna, kandungan",
+          "step2": "Pilih + Optimumkan — Pilih daripada pelbagai hasil",
+          "step3": "Eksport & Guna — Sedia untuk paparan projek"
+        },
+        "data": {
+          "icon": "📊",
+          "name": "Aplikasi Analisis Data",
+          "desc": "Berikan data Excel anda kepada AI, jana papan pemuka visual secara automatik dan temui corak data.",
+          "step1": "Muat naik data — CSV dan Excel disokong",
+          "step2": "Tanya soalan — \"Cari bulan dengan jualan tertinggi\"",
+          "step3": "Eksport laporan — Jana carta dan rumusan secara automatik"
+        }
+      }
+    },
+  "projects": {
+      "section_tag": "🏅 Paparan Projek",
+      "section_title": "Projek Popular Komuniti",
+      "upload_btn": "+ Muat Naik Projek Saya",
+      "rank_badge": "Kedudukan",
+      "personal_project": "Projek Peribadi"
+    },
+    "share": {
+      "emoji": "🎁",
+      "title": "Dapatkan Langganan Percuma Seumur Hidup dengan Berkongsi",
+      "subtitle": "Hanya kongsi pautan eksklusif anda dengan 1 rakan",
+      "benefit1_title": "Langganan Percuma Seumur Hidup",
+      "benefit1_desc": "Nikmati semua ciri premium selama-lamanya",
+      "benefit2_title": "Sertai Kumpulan WhatsApp",
+      "benefit2_desc": "Terima berita AI terkini setiap hari pada 9:00 Pagi",
+      "benefit3_title": "Buka Kunci Lencana Pencapaian",
+      "benefit3_desc": "Lencana eksklusif untuk penyumbang komuniti",
+      "btn_whatsapp": "💬 Kongsi WhatsApp",
+      "btn_facebook": "📘 Kongsi Facebook",
+      "btn_copy": "🔗 Salin Pautan Eksklusif",
+      "btn_later": "Kemudian"
+    },
+    "footer": {
+      "about": "Tentang Kami",
+      "contact": "Hubungi",
+      "privacy": "Dasar Privasi",
+      "terms": "Terma Perkhidmatan",
+      "copyright": "© 2026 Future Tech Brief. Hak cipta terpelihara."
+    }
+  }
+}
