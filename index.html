@@ -898,17 +898,14 @@ document
 
     updateLanguage();
 });
-<!-- === 修复版：保留所有旧功能 + 多语言 === -->
-<script src="./i18n/i18n.js"></script>
-<script src="./js/homepage-manager.js"></script>
+<!-- === 回滚稳定版：恢复注册、上传、点赞功能 === -->
 <script src="./js/ranking-engine.js"></script>
 
 <script>
-  // 页面完全加载后执行
-  document.addEventListener('DOMContentLoaded', async () => {
-    console.log('🚀 页面修复初始化开始...');
+  // 原来的初始化代码（核心恢复）
+  document.addEventListener('DOMContentLoaded', () => {
+    console.log('🚀 已回滚到稳定版本');
 
-    // === 保留原来的所有功能初始化 ===
     if (typeof renderTools === 'function') renderTools();
     if (typeof renderProjects === 'function') renderProjects();
     if (typeof loadProjects === 'function') loadProjects();
@@ -916,15 +913,16 @@ document
     if (typeof checkLoginStatus === 'function') checkLoginStatus();
     if (typeof updateLanguage === 'function') updateLanguage();
 
-    // === 新多语言系统 ===
-    await window.i18n.initializeI18n();
-
-    // 延迟触发一次完整渲染
-    setTimeout(() => {
-      if (typeof window.renderPageContent === 'function') {
-        window.renderPageContent();
-      }
-    }, 500);
+    // 保留原有的语言切换
+    const langBtn = document.getElementById('lang-btn');
+    if (langBtn) {
+      langBtn.addEventListener('click', () => {
+        if (currentLang === 'zh') currentLang = 'en';
+        else if (currentLang === 'en') currentLang = 'ms';
+        else currentLang = 'zh';
+        updateLanguage();
+      });
+    }
   });
 </script>
 
