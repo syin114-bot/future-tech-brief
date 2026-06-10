@@ -563,8 +563,8 @@ function renderProjects(list) {
           <span class="project-rank-badge">排名 #${p.rank || i+1}</span>
           <span class="project-diff diff-${p.diff || 'beginner'}">${p.diff === 'beginner' ? '初级' : p.diff === 'intermediate' ? '中级' : '高级'}</span>
         </div>
-        <div class="project-title">${p.name}</div>
-        <div class="project-desc">${p.desc}</div>
+<div class="project-title">${p.title || p.name}</div>
+<div class="creator-avatar">${(p.author_name || p.creator || '?')[0]}</div>
         <div class="project-creator">
           <div class="creator-avatar">${(p.author_name || p.creator || '?')[0]}</div>
           <div class="creator-name">${p.author_name || p.creator || '匿名'} · 2026</div>
