@@ -898,14 +898,22 @@ document
 
     updateLanguage();
 });
-// ── 初始化 ──
-renderTools();
-renderProjects();
-loadProjects();
-loadNews();
-checkLoginStatus();
+<!-- === 多语言系统初始化（新版）=== -->
+<script src="./i18n/i18n.js"></script>
+<script src="./js/homepage-manager.js"></script>
 
-updateLanguage();
+<script>
+  document.addEventListener('DOMContentLoaded', async () => {
+    console.log('🚀 页面加载完成，开始初始化 i18n...');
+    
+    // 如果你还有旧的语言代码，先保留初始化部分
+    if (typeof updateLanguage === 'function') {
+      updateLanguage();   // 保留旧导航语言
+    }
+    
+    await window.i18n.initializeI18n();
+  });
 </script>
+
 </body>
 </html>
