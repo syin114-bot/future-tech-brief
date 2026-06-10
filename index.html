@@ -219,12 +219,10 @@ footer { border-top: 1px solid var(--border); padding: 48px 32px 32px; margin-to
   <a href="#projects" id="nav-projects">项目</a>
   <a href="#news" id="nav-news">资讯</a>
 </div>
-  <div class="nav-actions">
-    <button class="lang-btn" id="lang-btn">
-🌐 中文
-</button>
-    <button class="btn-primary" id="nav-auth-btn" onclick="openModal('auth')">登录 / 注册</button>
-  </div>
+<div class="nav-actions">
+  <!-- 语言按钮由 i18n.js 动态生成 -->
+  <button class="btn-primary" data-i18n="nav.join">立即加入</button>
+</div>
 </nav>
 
 <section class="hero">
