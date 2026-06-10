@@ -898,21 +898,41 @@ document
 
     updateLanguage();
 });
-<!-- === 多语言系统初始化（新版）=== -->
+<!-- === 旧功能保留 + 新多语言系统 === -->
 <script src="./i18n/i18n.js"></script>
 <script src="./js/homepage-manager.js"></script>
+<script src="./js/ranking-engine.js"></script>   <!-- 保留你的点赞引擎 -->
 
 <script>
+  // 页面加载完成后初始化
   document.addEventListener('DOMContentLoaded', async () => {
-    console.log('🚀 页面加载完成，开始初始化 i18n...');
-    
-    // 如果你还有旧的语言代码，先保留初始化部分
-    if (typeof updateLanguage === 'function') {
-      updateLanguage();   // 保留旧导航语言
-    }
-    
+    console.log('🚀 启动初始化...');
+
+    // 先执行原来的初始化函数（修复交互）
+    if (typeof renderTools === 'function') renderTools();
+    if (typeof renderProjects === 'function') renderProjects();
+    if (typeof loadProjects === 'function') loadProjects();
+    if (typeof loadNews === 'function') loadNews();
+    if (typeof checkLoginStatus === 'function') checkLoginStatus();
+
+    // 再启动新多语言系统
     await window.i18n.initializeI18n();
+
+    // 手动触发一次完整渲染
+    if (typeof window.renderPageContent === 'function') {
+      setTimeout(window.renderPageContent, 300);
+    }
   });
+
+  // 保留旧语言按钮点击（兼容）
+  const oldLangBtn = document.getElementById('lang-btn');
+  if (oldLangBtn) {
+    oldLangBtn.addEventListener('click', () => {
+      const current = window.i18n.currentLanguage();
+      const next = current === 'zh-CN' ? 'en' : 'zh-CN';
+      window.i18n.setLanguage(next);
+    });
+  }
 </script>
 
 </body>
