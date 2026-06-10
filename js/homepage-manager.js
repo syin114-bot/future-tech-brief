@@ -6,22 +6,28 @@
  */
 
 function renderPageContent() {
-  console.log('🔄 渲染页面内容，当前语言:', window.i18n.currentLanguage());
   const { t } = window.i18n;
-
+  
+  // ── 导航栏 ──
   updateNavigation();
+  
+  // ── Hero 区域 ──
   updateHeroSection();
+  
+  // ── 新闻区域 ──
   updateNewsSection();
+  
+  // ── 工具排行区域 ──
   updateToolsSection();
+  
+  // ── Vibe Coding 区域 ──
   updateVibeSection();
+  
+  // ── 项目展示区域 ──
   updateProjectsSection();
+  
+  // ── 分享区域 ──
   updateShareSection();
-
-  // 通用兜底：所有带 data-i18n 属性的元素
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if (key) el.textContent = t(key);
-  });
 }
 
 function updateNavigation() {
