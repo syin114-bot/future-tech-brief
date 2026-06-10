@@ -219,25 +219,21 @@ footer { border-top: 1px solid var(--border); padding: 48px 32px 32px; margin-to
   <a href="#projects" id="nav-projects">项目</a>
   <a href="#news" id="nav-news">资讯</a>
 </div>
-<div class="nav-actions">
-  <!-- 语言按钮由 i18n.js 动态生成 -->
-  <button class="btn-primary" data-i18n="nav.join">立即加入</button>
-</div>
+  <div class="nav-actions">
+    <button class="lang-btn" id="lang-btn">
+🌐 中文
+</button>
+    <button class="btn-primary" id="nav-auth-btn" onclick="openModal('auth')">登录 / 注册</button>
+  </div>
 </nav>
 
 <section class="hero">
   <div class="hero-glow glow-blue"></div>
   <div class="hero-glow glow-purple"></div>
   <div class="hero-glow glow-green"></div>
-<div class="hero-badge" data-i18n="hero.badge">
-  <div class="badge-dot"></div>
-</div>
-
-<h1>
-  <span class="line1" data-i18n="hero.title_line1">用 No-Code AI</span>
-  <span class="line2" data-i18n="hero.title_line2">改变世界</span>
-</h1>
-<p class="hero-sub" data-i18n="hero.subtitle">展示你的 AI 创意，获得认可和奖励</p>
+<div class="hero-badge"><div class="badge-dot"></div>2026 · 最新 AI 资讯实时更新</div>
+<h1><span class="line1">用 No-Code AI</span><span class="line2">改变世界</span></h1>
+<p class="hero-sub">展示你的 AI 创意，发现最新工具，加入马来西亚最活跃的 AI 学生社区</p>
   <div class="hero-ctas">
     <button class="btn-primary btn-lg" onclick="openModal('auth')">🚀 立即加入</button>
     <button class="btn-outline btn-lg" onclick="scrollTo({top: document.getElementById('projects').offsetTop - 70, behavior:'smooth'})">浏览项目</button>
@@ -567,8 +563,8 @@ function renderProjects(list) {
           <span class="project-rank-badge">排名 #${p.rank || i+1}</span>
           <span class="project-diff diff-${p.diff || 'beginner'}">${p.diff === 'beginner' ? '初级' : p.diff === 'intermediate' ? '中级' : '高级'}</span>
         </div>
-<div class="project-title">${p.title || p.name}</div>
-<div class="creator-avatar">${(p.author_name || p.creator || '?')[0]}</div>
+        <div class="project-title">${p.name}</div>
+        <div class="project-desc">${p.desc}</div>
         <div class="project-creator">
           <div class="creator-avatar">${(p.author_name || p.creator || '?')[0]}</div>
           <div class="creator-name">${p.author_name || p.creator || '匿名'} · 2026</div>
@@ -898,33 +894,14 @@ document
 
     updateLanguage();
 });
-<!-- === 回滚稳定版：恢复注册、上传、点赞功能 === -->
-<script src="./js/ranking-engine.js"></script>
+// ── 初始化 ──
+renderTools();
+renderProjects();
+loadProjects();
+loadNews();
+checkLoginStatus();
 
-<script>
-  // 原来的初始化代码（核心恢复）
-  document.addEventListener('DOMContentLoaded', () => {
-    console.log('🚀 已回滚到稳定版本');
-
-    if (typeof renderTools === 'function') renderTools();
-    if (typeof renderProjects === 'function') renderProjects();
-    if (typeof loadProjects === 'function') loadProjects();
-    if (typeof loadNews === 'function') loadNews();
-    if (typeof checkLoginStatus === 'function') checkLoginStatus();
-    if (typeof updateLanguage === 'function') updateLanguage();
-
-    // 保留原有的语言切换
-    const langBtn = document.getElementById('lang-btn');
-    if (langBtn) {
-      langBtn.addEventListener('click', () => {
-        if (currentLang === 'zh') currentLang = 'en';
-        else if (currentLang === 'en') currentLang = 'ms';
-        else currentLang = 'zh';
-        updateLanguage();
-      });
-    }
-  });
+updateLanguage();
 </script>
-
 </body>
 </html>
